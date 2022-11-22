@@ -41,6 +41,7 @@ public class CpuIntensiveComputeNode extends MbJavaComputeNode {
 
 			addJsonChildToElement(outJsonData, "COMPNAME", environment.get("COMPNAME"));
 			addJsonChildToElement(outJsonData, "HOSTNAME", environment.get("HOSTNAME"));
+			addJsonChildToElement(outJsonData, "KJELL", "Kjell");
 
 			addJsonChildToElement(outJsonData, "OPENSHIFT_BUILD_NAMESPACE",
 					environment.get("OPENSHIFT_BUILD_NAMESPACE"));

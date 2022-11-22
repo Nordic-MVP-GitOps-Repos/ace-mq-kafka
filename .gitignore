@@ -1,0 +1,5 @@
+*.log
+.gradle/**
+MyExampleApplicationJava/MyExampleApplicationJava.jar
+MyExampleApplicationTest/MyExampleApplicationTest.jar
+build/**
