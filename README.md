@@ -3,5 +3,3 @@ Very simple App Connect Enterprise application from example here: https://github
 After cloning this repository in the ACE Toolkit, you can deploy the application to a local test server and call it with: 
 
 ```curl -X POST -d "name=test" http://localhost:7800/MyExampleMessageFlow```
-
-
