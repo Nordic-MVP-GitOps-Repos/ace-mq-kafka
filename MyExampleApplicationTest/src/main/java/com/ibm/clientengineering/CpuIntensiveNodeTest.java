@@ -30,8 +30,7 @@ public class CpuIntensiveNodeTest {
 		TestMessageAssembly outputAssembly = nodeSpy.propagatedMessageAssembly("out", 1);
 		
 		String output = outputAssembly.getMessageBodyAsString();
-		
-		fail("Failed");
+	
 				
 		System.out.println("output: " + output);
 		assertTrue(output.contains("GIT_COMMIT"));
