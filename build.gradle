@@ -2,13 +2,16 @@
 // Before running the build, make sure you've sourced the mqsiprofile command
 // On OS X, do:
 // source /Applications/IBM\ App\ Connect\ Enterprise.app/Contents/mqsi/server/bin/mqsiprofile
-def baseFilePath = System.getenv("MQSI_BASE_FILEPATH")
-def binpath = baseFilePath + '/server/bin/'
+// def baseFilePath = System.getenv("MQSI_BASE_FILEPATH")
+// def binpath = baseFilePath + '/server/bin/'
 
 // ACE server creates unix domain sockets in it's work directory. 
 // Max length for UDS is 104 on Mac and 108 on Linux,
 // So we need to run the IntegrationServer in a workdirectory that is not in a 
 // deep folder hierarchy 
+
+/*
+
 def tempDir = '/tmp'
 
 task buildWithUnitTests(type: Exec) {
@@ -24,3 +27,10 @@ task runUnitTests(type: Exec) {
 }
 
 defaultTasks 'packageApplication', 'buildWithUnitTests', 'runUnitTests'
+*/
+
+plugins {
+    id 'ibm-ace' version '0.1'
+}
+
+defaultTasks 'bar'
