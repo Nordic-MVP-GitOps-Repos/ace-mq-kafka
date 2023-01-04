@@ -5,6 +5,7 @@
 def baseFilePath = System.getenv("MQSI_BASE_FILEPATH")
 def binpath = baseFilePath + '/server/bin/'
 
+
 // ACE server creates unix domain sockets in it's work directory. 
 // Max length for UDS is 104 on Mac and 108 on Linux,
 // So we need to run the IntegrationServer in a workdirectory that is not in a 
