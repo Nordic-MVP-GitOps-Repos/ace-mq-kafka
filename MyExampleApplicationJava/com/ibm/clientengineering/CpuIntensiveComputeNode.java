@@ -49,9 +49,7 @@ public class CpuIntensiveComputeNode extends MbJavaComputeNode {
 			addJsonChildToElement(outJsonData, "ACE_SERVER_NAME", environment.get("ACE_SERVER_NAME"));
 			addJsonChildToElement(outJsonData, "GIT_COMMIT", environment.get("GIT_COMMIT"));
 			addJsonChildToElement(outJsonData, "SOME_OUTPUT", environment.get("GIT_COMMIT"));
-			
-			addJsonChildToElement(outJsonData, "NOV23", "NOV23");
-					
+							
 			int primeCount = 5000;
 			
 			try {
