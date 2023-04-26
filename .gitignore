@@ -27,3 +27,6 @@ build/
 *.sth
 *.jks
 *.crt
+
+# ibm-mq-ccdt.json
+ibm-mq-ccdt.json
