@@ -1,5 +1,29 @@
+# Logfiles
+
 *.log
-.gradle/**
-MyExampleApplicationJava/MyExampleApplicationJava.jar
-MyExampleApplicationTest/MyExampleApplicationTest.jar
-build/**
+
+# Build Artifacts
+.gradle
+build/
+
+# Class files 
+*.class
+
+# JAR files
+*.jar
+
+# Binaries
+/bin
+
+# VScode artifacts
+.settings
+
+# Certificates & truststores
+*.pem
+*.p12
+*.rdb
+*.kdb
+*.crl
+*.sth
+*.jks
+*.crt

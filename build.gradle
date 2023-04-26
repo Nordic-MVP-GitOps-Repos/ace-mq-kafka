@@ -14,15 +14,15 @@ def binpath = baseFilePath + '/server/bin/'
 def tempDir = '/tmp'
 
 task buildWithUnitTests(type: Exec) {
-    commandLine binpath + 'ibmint', 'deploy', '--trace', "$projectDir" + '/trace.log', '--input-path', "$projectDir", '--output-work-directory', tempDir, '--project', 'MyExampleApplication', '--project', 'MyExampleApplicationTest', '--project', 'MyExampleApplicationJava'
+    commandLine binpath + 'ibmint', 'deploy', '--trace', "$projectDir" + '/trace.log', '--input-path', "$projectDir", '--output-work-directory', tempDir, '--project', 'AceMQKafkaExample', '--project', 'AceMQKafkaExampleTest', '--project', 'AceMQKafkaExampleJava'
 }
 
 task packageApplication(type: Exec) {
-    commandLine binpath + 'ibmint', 'package', '--input-path', "$projectDir", '--output-bar-file', "$buildDir" + '/' + "$name" + '.bar', '--project', 'MyExampleApplication', '--project', 'MyExampleApplicationJava'
+    commandLine binpath + 'ibmint', 'package', '--input-path', "$projectDir", '--output-bar-file', "$buildDir" + '/' + "$name" + '.bar', '--project', 'AceMQKafkaExample', '--project', 'AceMQKafkaExampleJava'
 }
 
 task runUnitTests(type: Exec) {
-    commandLine binpath + 'IntegrationServer', '-w', tempDir, '--test-project', 'MyExampleApplicationTest', '--no-nodejs', '--admin-rest-api', '-1', '--name', '1'
+    commandLine binpath + 'IntegrationServer', '-w', tempDir, '--test-project', 'AceMQKafkaExampleTest', '--no-nodejs', '--admin-rest-api', '-1', '--name', '1'
 }
 
 defaultTasks 'packageApplication', 'buildWithUnitTests', 'runUnitTests'
